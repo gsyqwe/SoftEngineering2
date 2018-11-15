@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-13 0:48:54 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class discriminator-value="RECEIPT" name="PO.ReceiptPO" table="RECEIPTPO">
+		<id access="field" name="id" type="java.lang.String">
+			<column name="RECEIPTID" />
+			<generator class="assigned" />
+		</id>
+
+		<discriminator column="class_" insert="true" not-null="true" />
+
+		<property generated="never" lazy="false" name="type">
+			<column name="TYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">enums.ReceiptType</param>
+			</type>
+		</property>
+
+		<property generated="never" lazy="false" name="state">
+			<column name="STATE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">enums.ReceiptState</param>
+			</type>
+		</property>
+
+		<property generated="never" lazy="false" name="operatorID"
+			type="java.lang.String">
+			<column name="OPERATORID" />
+		</property>
+
+		<property generated="never" lazy="false" name="date"
+			type="java.util.Date">
+			<column name="DATE" />
+		</property>
+
+		<property name="isDeleted" type="true_false">
+			<column name="ISDELETED" />
+		</property>
+
+		<set cascade="save-update" fetch="select" lazy="false" name="lineItem"
+			sort="unsorted" table="RECEIPT_LINEITEM">
+			<key column="RECEIPTID" />
+			<many-to-many class="PO.LineItemPO" column="LINEITEMID"
+				unique="false" />
+		</set>
+
+		<!-- FinancialReceiptPO extends ReceiptPO -->
+		<subclass discriminator-value="FINANCIAL" name="PO.FinancialReceiptPO">
+			<property access="field" generated="never" lazy="false"
+				name="financialReceiptType">
+				<column name="FINANCIALRECEIPTTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">enums.FinancialReceiptType</param>
+				</type>
+			</property>
+			<property generated="never" lazy="false" name="sum" type="double">
+				<column name="SUM" />
+			</property>
+			<property generated="never" lazy="false" name="memberID"
+				type="java.lang.String">
+				<column name="MEMBERID" />
+			</property>
+		</subclass>
+
+		<!-- InventoryReceiptPO extends ReceiptPO -->
+		<subclass discriminator-value="INVENTORY" extends="PO.ReceiptPO"
+			name="PO.InventoryReceiptPO" select-before-update="false">
+			<property generated="never" lazy="false" name="inventoryType">
+				<column name="INVENTORYTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">enums.InventoryReceiptType</param>
+				</type>
+			</property>
+		</subclass>
+
+		<!-- SalesReceiptPO needs many to many SalesReceiptPO extends ReceiptPO -->
+		<subclass discriminator-value="SALES" extends="PO.ReceiptPO"
+			name="PO.SalesReceiptPO" select-before-update="false">
+
+			<property generated="never" lazy="false" name="memberID"
+				type="java.lang.String">
+				<column name="MEMBERID" />
+			</property>
+
+			<property generated="never" lazy="false" name="salesType">
+				<column name="SALESTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">enums.SalesReceiptType</param>
+				</type>
+			</property>
+
+			<property generated="never" lazy="false" name="sumAfterDiscount"
+				type="double">
+				<column name="SUMAFTERDISCOUNT" />
+			</property>
+
+			<property generated="never" lazy="false" name="sumBeforeDiscount"
+				type="double">
+				<column name="SUMBEFOREDISCOUNT" />
+			</property>
+
+			<set cascade="save-update" fetch="select" lazy="false" name="voucherReceived"
+				table="SALESRECEIPT_VOUCHER">
+				<key column="RECEIPTID" />
+				<many-to-many class="PO.VoucherPO" column="VOUCHERID" />
+			</set>
+
+			<many-to-one name="voucher" column="VOUCHERID" unique="true" cascade="save-update"></many-to-one>
+
+			<property generated="never" lazy="false" name="discount"
+				type="double">
+				<column name="DISCOUNT" />
+			</property>
+
+			<property generated="never" lazy="false" name="comment"
+				type="java.lang.String">
+				<column name="COMMENT" />
+			</property>
+
+			<property generated="never" lazy="false" name="repositoryName"
+				type="java.lang.String">
+				<column name="REPOSITORYNAME" />
+			</property>
+		</subclass>
+		<!-- <list name="lineItem" inverse="false" table="LINEITEMPO" lazy="true"> 
+			<key> <column name="ID" /> </key> <list-index></list-index> <one-to-many 
+			class="PO.LineItemPO" /> </list> -->
+	</class>
+</hibernate-mapping>

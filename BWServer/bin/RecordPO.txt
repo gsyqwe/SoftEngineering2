@@ -1,0 +1,10 @@
+{"amount":97.5,"commodityID":"COM-00001","date":"Dec 13, 2017 11:48:52 AM","id":0,"quantity":20,"stockInAndOutTime":"Dec 19, 2017 10:00:19 AM","stockInAndOutType":"STOCK_OUT"}
+{"amount":49.4,"commodityID":"COM-00002","date":"Dec 18, 2017 10:53:38 PM","id":0,"quantity":18,"stockInAndOutTime":"Dec 18, 2017 2:55:30 AM","stockInAndOutType":"STOCK_IN"}
+{"amount":39.9,"commodityID":"COM-00003","date":"Dec 13, 2017 12:06:49 PM","id":0,"quantity":36,"stockInAndOutTime":"Dec 18, 2017 2:51:59 AM","stockInAndOutType":"STOCK_OUT"}
+{"amount":9.0,"commodityID":"COM-00004","date":"Dec 19, 2017 9:47:09 AM","id":0,"quantity":99,"stockInAndOutTime":"Dec 19, 2017 9:59:59 AM","stockInAndOutType":"STOCK_OUT"}
+{"amount":20.4,"commodityID":"COM-00005","date":"Dec 18, 2017 9:53:29 AM","id":0,"quantity":34,"stockInAndOutTime":"Dec 19, 2017 7:33:29 AM","stockInAndOutType":"STOCK_IN"}
+{"amount":97.5,"commodityID":"COM-00001","date":"Dec 22, 2017 12:51:35 AM","id":0,"quantity":20,"stockInAndOutTime":"Dec 27, 2017 11:03:02 PM","stockInAndOutType":"STOCK_OUT"}
+{"amount":49.4,"commodityID":"COM-00002","date":"Dec 27, 2017 11:56:21 AM","id":0,"quantity":18,"stockInAndOutTime":"Dec 26, 2017 3:58:13 PM","stockInAndOutType":"STOCK_IN"}
+{"amount":39.9,"commodityID":"COM-00003","date":"Dec 22, 2017 1:09:32 AM","id":0,"quantity":36,"stockInAndOutTime":"Dec 26, 2017 3:54:42 PM","stockInAndOutType":"STOCK_OUT"}
+{"amount":9.0,"commodityID":"COM-00004","date":"Dec 27, 2017 10:49:52 PM","id":0,"quantity":99,"stockInAndOutTime":"Dec 27, 2017 11:02:42 PM","stockInAndOutType":"STOCK_OUT"}
+{"amount":20.4,"commodityID":"COM-00005","date":"Dec 26, 2017 10:56:12 PM","id":0,"quantity":34,"stockInAndOutTime":"Dec 27, 2017 8:36:12 PM","stockInAndOutType":"STOCK_IN"}

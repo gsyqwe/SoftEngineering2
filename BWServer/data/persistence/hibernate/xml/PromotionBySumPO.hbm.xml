@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-12 1:16:01 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="PO.PromotionBySumPO" table="PROMOTIONBYSUMPO">
+		<id name="promotionID" type="java.lang.String">
+			<column name="PROMOTIONID" />
+			<generator class="assigned" />
+		</id>
+
+		<property name="startTime" type="java.util.Date">
+			<column name="STARTTIME" />
+		</property>
+
+		<property name="endTime" type="java.util.Date">
+			<column name="ENDTIME" />
+		</property>
+
+		<property name="minAmount" type="double">
+			<column name="MINAMOUNT" />
+		</property>
+
+		<property name="maxAmount" type="double">
+			<column name="MAXAMOUNT" />
+		</property>
+
+		<property name="isDeleted" type="true_false">
+			<column name="ISDELETED" />
+		</property>
+
+		<set name="giftList" table="PROMOTIONBYSUM_LINEITEM" inverse="false"
+			fetch="select" cascade="save-update" lazy="false">
+			<key column="ID" />
+			<many-to-many column="LINEITEMID" class="PO.LineItemPO" />
+		</set>
+
+		<set name="voucherList" table="PROMOTIONBYSUM_VOUCHER" inverse="false"
+			fetch="select" cascade="save-update" lazy="false">
+			<key column="ID" />
+			<many-to-many column="VOUCHERID" class="PO.VoucherPO" />
+		</set>
+
+	</class>
+</hibernate-mapping>

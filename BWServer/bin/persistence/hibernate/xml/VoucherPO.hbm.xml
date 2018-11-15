@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-12 14:55:16 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="PO.VoucherPO" table="VOUCHERPO">
+		<id name="voucherId" type="long">
+			<column name="VOUCHERID" />
+			<generator class="increment" />
+		</id>
+
+		<property name="endTime" type="java.util.Date">
+			<column name="ENDTIME" />
+		</property>
+
+		<property name="faceValue" type="double">
+			<column name="FACEVALUE" />
+		</property>
+
+		<property name="isDeleted" type="true_false">
+			<column name="ISDELETED" />
+		</property>
+
+
+		<set name="memberPOs" table="MEMBER_VOUCHER" cascade="all-delete-orphan" lazy="false"
+			fetch="select">
+			<key column="VOUCHERID"></key>
+			<many-to-many column="MEMBERID" class="PO.MemberPO"></many-to-many>
+		</set>
+
+		<set name="promotionBySumPOs" table="PROMOTIONBYSUM_VOUCHER"
+			cascade="all-delete-orphan" lazy="false" fetch="select">
+			<key column="VOUCHERID"></key>
+			<many-to-many column="ID" class="PO.PromotionBySumPO"></many-to-many>
+		</set>
+
+		<set cascade="all-delete-orphan" fetch="select" lazy="false" name="salesReceiptPOs"
+			table="SALESRECEIPT_VOUCHER">
+			<key column="VOUCHERID" />
+			<many-to-many class="PO.SalesReceiptPO" column="RECEIPTID" />
+		</set>
+
+		<set name="promotionByLevelPOs" table="PROMOTIONBYLEVEL_VOUCHER"
+			cascade="all-delete-orphan" lazy="false" fetch="select">
+			<key column="VOUCHERID"></key>
+			<many-to-many column="PROMOTIONLEVELID" class="PO.PromotionByLevelPO"></many-to-many>
+		</set>
+
+		<property name="startTime" type="java.util.Date">
+			<column name="STARTTIME" />
+		</property>
+	</class>
+</hibernate-mapping>

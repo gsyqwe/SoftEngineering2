@@ -1,0 +1,4 @@
+{"id":"MAN-002","password":"654321","job":"SALESMAN","name":"吉宇哲"}
+{"id":"MAN-001","password":"123456","job":"FINANCIAL","name":"賴健明"}
+{"id":"MAN-003","password":"112233","job":"INVENTORY","name":"袁玉婷"}
+{"id":"MAN-004","password":"112233","job":"ADMINOR","name":"狗狗"}

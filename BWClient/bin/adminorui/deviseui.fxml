@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminorui.deviseui">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="800.0">
+         <image>
+            <Image url="@../background.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="663.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button layoutY="117.0" mnemonicParsing="false" onAction="#HandleESC" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="40.0">
+               <image>
+                  <Image url="@../esc2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="713.0" layoutY="7.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleHelp" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../help.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="743.0" layoutY="7.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleOut" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../esc1.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Text layoutX="310.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改员工密码" wrappingWidth="230.0">
+         <font>
+            <Font name="Verdana" size="30.0" />
+         </font>
+      </Text>
+      <Button layoutX="255.0" layoutY="443.0" mnemonicParsing="false" onAction="#HandleDevise" prefHeight="32.0" prefWidth="72.0" text="修改">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="510.0" layoutY="443.0" mnemonicParsing="false" onAction="#HandleCancle" prefHeight="36.0" prefWidth="60.0" text="取消">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="128.0" layoutY="221.0" text="员工姓名">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="297.0" text="员工编号">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="441.0" layoutY="221.0" text="修改密码">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="441.0" layoutY="297.0" text="再次输入">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminorui.addui">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1080.0">
+         <image>
+            <Image url="@../background.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="663.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button layoutY="148.0" mnemonicParsing="false" onAction="#HandleESC" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../09-876.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text layoutX="473.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="增加员工" wrappingWidth="174.0">
+         <font>
+            <Font name="Verdana" size="30.0" />
+         </font>
+      </Text>
+      <Button layoutX="425.0" layoutY="697.0" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false" onAction="#HandleAdd" prefHeight="30.0" prefWidth="72.0" text="增加">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="596.0" layoutY="697.0" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false" onAction="#HandleCancle" prefHeight="30.0" prefWidth="60.0" text="取消" />
+      <Button layoutX="1036.0" layoutY="14.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleOut" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../home.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="993.0" layoutY="14.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleHelp" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../question.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

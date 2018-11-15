@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="financelerui.salelistui">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1080.0">
+         <image>
+            <Image url="@../background.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="1007.0" layoutY="5.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleHelp" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../question.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="1042.0" layoutY="5.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleOut" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutY="150.0" mnemonicParsing="false" onAction="#HandleEsc" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../09-876.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Text layoutX="42.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button layoutX="497.0" layoutY="763.0" mnemonicParsing="false" onAction="#Handlesure" text="确认" />
+      <Button layoutX="697.0" layoutY="763.0" mnemonicParsing="false" onAction="#HandleCancle" prefHeight="32.0" prefWidth="57.0" text="取消" />
+      <Text layoutX="361.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查看销售明细表" textAlignment="CENTER" wrappingWidth="206.0">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <Button layoutX="939.0" layoutY="150.0" mnemonicParsing="false" onAction="#HandleExport" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="55.0">
+               <image>
+                  <Image url="@../asdfasfasdf.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="990.0" layoutY="168.0" prefHeight="22.0" prefWidth="76.0" text="导出报表" />
+      <Label layoutX="29.0" layoutY="200.0" text="开始时间">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="235.0" text="结束时间">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="209.0" text="筛选">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

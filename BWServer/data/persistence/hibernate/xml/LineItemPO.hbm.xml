@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-13 0:48:54 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="PO.LineItemPO" table="LINEITEMPO">
+		<id name="lineItemID" type="long">
+			<column name="LINEITEMID" />
+			<generator class="increment" />
+		</id>
+
+		<property name="id" type="java.lang.String">
+			<column name="ID" />
+		</property>
+
+		<property name="comment" type="java.lang.String">
+			<column name="COMMENT" />
+		</property>
+
+		<property name="price" type="double">
+			<column name="PRICE" />
+		</property>
+
+		<property name="quantity" type="int">
+			<column name="QUANTITY" />
+		</property>
+
+		<property name="isDeleted" type="true_false">
+			<column name="ISDELETED" />
+		</property>
+
+		<set name="receiptPOs" table="RECEIPT_LINEITEM" cascade="all-delete-orphan"
+			lazy="false">
+			<key column="LINEITEMID"></key>
+			<many-to-many column="RECEIPTID" class="PO.ReceiptPO"></many-to-many>
+		</set>
+
+		<set name="promotionByCombinationListPOs" table="PROMOTIONBYCOMBINATIONLIST_LINEITEM"
+			fetch="select" cascade="all-delete-orphan" lazy="false">
+			<key column="LINEITEMID" />
+			<many-to-many column="COMBINATIONID" class="PO.PromotionByCombinationListPO" />
+		</set>
+
+		<set name="promotionBySumPOs" table="PROMOTIONBYSUM_LINEITEM"
+			fetch="select" cascade="all-delete-orphan" lazy="false">
+			<key column="LINEITEMID" />
+			<many-to-many column="ID" class="PO.PromotionBySumPO" />
+		</set>
+
+		<set name="promotionByLevelPOs" table="PROMOTIONBYLEVE_LINEITEM"
+			cascade="all-delete-orphan" lazy="false">
+			<key column="LINEITEMID"></key>
+			<many-to-many column="PROMOTIONLEVELID" class="PO.PromotionByLevelPO"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

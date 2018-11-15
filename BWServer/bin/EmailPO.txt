@@ -1,0 +1,10 @@
+{"id":0,"content":["你所提交的現金費用單據已獲得通過"],"receiverID":"MAN-001","senderID":"MAN-002","date":"Dec 19, 2017 1:14:56 PM","isReaded":false}
+{"id":0,"content":["你所提交的收款單據由總經理修改金額後獲得通過"],"receiverID":"MAN-004","senderID":"MAN-002","date":"Dec 19, 2017 1:24:36 PM","isReaded":false}
+{"id":0,"content":["你所提交的銷售單據已獲得通過"],"receiverID":"MAN-001","senderID":"MAN-002","date":"Dec 19, 2017 1:24:33 PM","isReaded":true}
+{"id":0,"content":["你所提交的現金費用單據沒有獲得通過"],"receiverID":"MAN-004","senderID":"MAN-003","date":"Dec 19, 2017 1:14:56 PM","isReaded":false}
+{"id":0,"content":["你所提交的現金費用單據已獲得通過"],"receiverID":"MAN-002","senderID":"MAN-003","date":"Dec 19, 2017 12:58:16 PM","isReaded":false}
+{"id":0,"content":["你所提交的現金費用單據已獲得通過"],"receiverID":"MAN-001","senderID":"MAN-002","date":"Dec 28, 2017 2:17:39 AM","isReaded":false}
+{"id":0,"content":["你所提交的收款單據由總經理修改金額後獲得通過"],"receiverID":"MAN-004","senderID":"MAN-002","date":"Dec 28, 2017 2:27:19 AM","isReaded":false}
+{"id":0,"content":["你所提交的銷售單據已獲得通過"],"receiverID":"MAN-001","senderID":"MAN-002","date":"Dec 28, 2017 2:27:16 AM","isReaded":true}
+{"id":0,"content":["你所提交的現金費用單據沒有獲得通過"],"receiverID":"MAN-004","senderID":"MAN-003","date":"Dec 28, 2017 2:17:39 AM","isReaded":false}
+{"id":0,"content":["你所提交的現金費用單據已獲得通過"],"receiverID":"MAN-002","senderID":"MAN-003","date":"Dec 28, 2017 2:00:59 AM","isReaded":false}

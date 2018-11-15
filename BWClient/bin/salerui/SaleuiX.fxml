@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="800.0" maxWidth="1080.0" minHeight="800.0" minWidth="1080.0" prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="salerui.SaleuiX">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1080.0">
+         <image>
+            <Image url="@../background.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="471.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="新建销售单">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Button layoutX="1007.0" layoutY="5.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleHelp" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../question.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="1042.0" layoutY="5.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleOut" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="5.0" layoutY="150.0" mnemonicParsing="false" onAction="#HandleEsc" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../09-876.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="802.0" layoutY="259.0" text="操作员">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="313.0" prefHeight="24.0" prefWidth="80.0" text="客      户">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="305.0" layoutY="259.0" prefHeight="24.0" prefWidth="80.0" text="业  务  员">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="581.0" layoutY="259.0" text="仓    库">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="376.0" text="销售清单">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="309.0" layoutY="749.0" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false" onAction="#HandleTI" prefHeight="30.0" prefWidth="72.0" text="提    交">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button layoutX="504.0" layoutY="749.0" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false" onAction="#HandleCancle" prefHeight="30.0" prefWidth="72.0" text="取   消">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label layoutX="24.0" layoutY="707.0" text="原总金额" />
+      <Label layoutX="255.0" layoutY="707.0" text="原折让" />
+      <Label layoutX="518.0" layoutY="707.0" text="已用代金券" />
+      <Label layoutX="784.0" layoutY="707.0" text="最终销售金额" />
+      <Label layoutX="39.0" layoutY="260.0" text="时   间">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="965.0" layoutY="206.0" mnemonicParsing="false" text="计算折让" />
+      <Button layoutX="668.0" layoutY="749.0" mnemonicParsing="false" text="保存草稿" />
+   </children>
+</AnchorPane>

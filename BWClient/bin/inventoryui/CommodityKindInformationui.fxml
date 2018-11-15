@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventoryui.CommodityKindInformationui">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1080.0">
+         <image>
+            <Image url="@../background.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="996.0" layoutY="8.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleHelp" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="40.0">
+               <image>
+                  <Image url="@../question.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="1036.0" layoutY="8.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleOut" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutY="152.0" mnemonicParsing="false" onAction="#HandleReturn" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../09-876.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Text layoutX="42.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Label layoutX="464.0" layoutY="222.0" prefHeight="46.0" prefWidth="152.0" text="查看商品分类">
+         <font>
+            <Font name="Verdana" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="343.0" layoutY="718.0" mnemonicParsing="false" text="确     认" />
+      <Button layoutX="716.0" layoutY="718.0" mnemonicParsing="false" onAction="#HandleCancle" text="取      消" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-12 11:46:50 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="PO.InitializeAccountPO" table="INITIALIZEACCOUNTPO">
+		<id name="id" type="long">
+			<column name="INITIALIZEACCOUNTID" />
+			<generator class="increment" />
+		</id>
+
+		<property name="date" type="java.util.Date">
+			<column name="DATE" />
+		</property>
+
+		<property name="isDeleted" type="true_false">
+			<column name="ISDELETED" />
+		</property>
+
+		<set name="bankAccountPOList" table="INITIALIZEACCOUNT_BANKACCOUNT"
+			inverse="false" lazy="false" fetch="select" cascade="save-update">
+			<key column="INITIALIZEACCOUNTID" />
+			<many-to-many column="BANKACCOUNTID" class="PO.BankAccountPO" />
+		</set>
+
+		<set name="commodityPOList" table="INITIALIZEACCOUNT_COMMODITY"
+			inverse="false" lazy="false" fetch="select" cascade="save-update">
+			<key column="INITIALIZEACCOUNTID" />
+			<many-to-many column="COMMODITYID" class="PO.CommodityPO" />
+		</set>
+
+		<set name="memberPOList" table="INITIALIZEACCOUNT_MEMBER" inverse="false"
+			lazy="false" fetch="select" cascade="save-update">
+			<key column="INITIALIZEACCOUNTID" />
+			<many-to-many column="MEMBERID" class="PO.MemberPO" />
+		</set>
+
+	</class>
+</hibernate-mapping>

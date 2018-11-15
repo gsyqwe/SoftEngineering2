@@ -1,0 +1,10 @@
+{"averagePrice":19.9,"id":0,"name":"USB燈","quantity":20,"version":"v1.0"}
+{"averagePrice":799.9,"id":0,"name":"高級水晶燈","quantity":9,"version":"v2.0"}
+{"averagePrice":559.9,"id":0,"name":"酒吧炫目射燈","quantity":17,"version":"v2.0"}
+{"averagePrice":29.9,"id":0,"name":"學生必備護眼台燈","quantity":50,"version":"v1.0"}
+{"averagePrice":99999.9,"id":0,"name":"紅綠燈","quantity":2,"version":"v1.0"}
+{"averagePrice":19.9,"id":0,"name":"USB燈","quantity":20,"version":"v1.0"}
+{"averagePrice":799.9,"id":0,"name":"高級水晶燈","quantity":9,"version":"v2.0"}
+{"averagePrice":559.9,"id":0,"name":"酒吧炫目射燈","quantity":17,"version":"v2.0"}
+{"averagePrice":29.9,"id":0,"name":"學生必備護眼台燈","quantity":50,"version":"v1.0"}
+{"averagePrice":99999.9,"id":0,"name":"紅綠燈","quantity":2,"version":"v1.0"}

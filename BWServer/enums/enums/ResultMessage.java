@@ -1,0 +1,256 @@
+package enums;
+
+/*
+ * @description 用作逻辑层的方法的返回值,以说明操作结果
+ * @author 161250051/Lai Kin Meng 
+ * @establish 25/10/2017
+ * @lastupdate 02/01/2018
+ */
+public enum ResultMessage {
+
+	// 账户增加成功
+	BANK_ACCOUNT_ADD_SUCCESS,
+
+	// 账户增加失败:账户名称重复
+	BANK_ACCOUNT_ADD_FAIL_NAME_REPEATED,
+
+	// 账户增加失败:银行卡号重复
+	BANK_ACCOUNT_ADD_FAIL_CARD_NUMBER_REPEATED,
+
+	// 账户增加失败:賬戶重复
+	BANK_ACCOUNT_ADD_FAIL_REPEATED,
+
+	// 账户增加失败:银行卡号非法
+	BANK_ACCOUNT_ADD_FAIL_ILLEGAL_CARD_NUMBER,
+
+	// 账户增加失败:密码多于6位数字
+	BANK_ACCOUNT_ADD_FAIL_ILLEGAL_PASSWORD,
+
+	// 账户增加失败:金额为负数
+	BANK_ACCOUNT_ADD_FAIL_NEGATIVE_AMOUNT,
+
+	// 账户删除成功
+	BANK_ACCOUNT_DELETE_SUCCESS,
+
+	// 账户删除失败:找不到匹配的账户
+	BANK_ACCOUNT_DELETE_FAIL_DISMATCH,
+
+	// 账户删除失败:输入的密码与账户不相应
+	BANK_ACCOUNT_DELETE_FAIL_PASSWORD_WRONG,
+
+	// 账户删除失败:输入的密码与账户不相应,且达到三次
+	BANK_ACCOUNT_DELETE_FAIL_PASSWORD_WRONG_THREE_TIME,
+
+	// 账户删除失败：还有余额
+	BANK_ACCOUNT_DELETE_FAIL_AMOUNT,
+
+	// 账户查询成功
+	BANK_ACCOUNT_INQUERY_SUCCESS,
+
+	// 账户查询失败:找不到匹配名称的账户
+	BANK_ACCOUNT_INQUERY_FAIL_NAME_DISMATCH,
+
+	// 账户查询失败:找不到匹配银行卡号的账户
+	BANK_ACCOUNT_INQUERY_FAIL_CARD_NUMBER_DISMATCH,
+
+	// 账户更新成功
+	BANK_ACCOUNT_UPDATE_SUCCESS,
+
+	// 账户更新失败，余额为负
+	BANK_ACCOUNT_UPDATE_FAIL_NEGATIVE_AMOUNT,
+
+	// 账户查询失败:找不到匹配名称的账户
+	BANK_ACCOUNT_UPDATE_FAIL_DISMATCH,
+
+	// 账户查询失败:找不到匹配银行卡号的账户
+	BANK_ACCOUNT_UPDATE_FAIL_CARD_NUMER_DISMATCH,
+
+	// 财务单据创建成功
+	FINANCIAL_RECEIPT_SET_UP_SUCCESS,
+
+	// 财务单据批准成功
+	FINANCIAL_RECEIPT_APPROVE_SUCCESS,
+
+	// 财务单据创建失败，已达上限
+	FINANCIAL_RECEIPT_SET_UP_FIAL_MAX_ALREADY,
+	// 财务单据批准失败:未授权员工
+	FINANCIAL_RECEIPT_APPROVE_FAIL_UNATHORIZED,
+
+	// 财务单据删除成功
+	FINANCIAL_RECEIPT_DELETE_SUCCESS,
+
+	// 財務單據插入失敗(數據層)
+	FINANCIAL_RECEIPT_INSERT_FAIL_REPEATED,
+
+	// 財務單據插入成功
+	FINANCIAL_RECEIPT_INSERT_SUCCESS,
+
+	// 財務單據刪除失敗:沒有找到匹配
+	FINANCIAL_RECEIPT_DELETE_FAIL_NOT_FOUND,
+
+	// 財務單據更新成功
+	FINANCIAL_RECEIPT_UPDATE_SUCCESS,
+
+	// 財務單據更新失敗:沒有找到匹配
+	FINANCIAL_RECEIPT_UPDATE_FAIL_NOT_FOUND,
+
+	// 期初建账成功
+	INITIALIZE_ACCOUNT_SUCCESS,
+
+	// 期初建账失败:没有添加账户
+	INITIALIZE_ACCOUNT_FAIL_EMPTY_BANK_ACCOUNT_ADDED,
+
+	// 期初建账失败:没有添加客户
+	INITIALIZE_ACCOUNT_FAIL_EMPTY_MEMBER_ADDED,
+
+	// 期初建账失败:没有添加商品
+	INITIALIZE_ACCOUNT_FAIL_EMPTY_COMMODITY_ADDED,
+
+	// 导出报表成功
+	EXPORT_REPORT_SUCCESS,
+
+	// 红冲成功
+	RED_COPY_SUCCESS,
+
+	// 客户的邮箱格式不对
+	MEMBER_EMAIL_FAULT,
+
+	// 只是想表示一下成功，没别的意思
+	SUCCESS,
+
+	// 删除分类失败
+	CATEGORY_DELETE_FAIL,
+
+	// 删除分类成功
+	CATEGORY_DELETE_SUCCESS,
+
+	// 新建商品分类成功
+	CATEGORY_INSERT_SUCCESS,
+
+	// 新建商品分类失败
+	CATEGORY_INSERT_FIAL_NAME_ALREADY_EXIST,
+
+	// 修改商品分类成功
+	CATEGORY_UPDATE_SUCCESS,
+
+	// 删除商品失败
+	COMMODITY_DELETE_FAIL,
+
+	// 删除商品成功
+	COMMIDITY_DELETE_SUCCESS,
+
+	// 新建商品成功
+	COMMODITU_INSERT_SUCCESS,
+
+	// 新建商品失败：商品名称已存在
+	COMMODITY_INSERT_FAIL_NAME_ALREADY_EXSIT,
+
+	// 修改商品成功
+	COMMODITY_UPDATE_SUCCESS,
+
+	// 商品出库失败：库存不足
+	COMMODITY_STOCKIN_FAIL,
+
+	// 登陆成功
+	LOGIN_SUCCESS,
+
+	// 登陆失败：密码错误
+	LOGIN_FAIL_WRONG_PASSWORD,
+
+	// 登陆失败：用户不存在
+	LOGIN_FAIL_USER_NOT_FOUND,
+	// 商品添加成功
+	COMMODITY_INSERT_SUCCESS,
+
+	// 商品刪除成功
+	COMMODITY_DELETE_SUCCESS,
+
+	// 銷售類單據添加成功
+	SALES_RECEIPT_INSERT_SUCCESS,
+
+	// 銷售類單據刪除成功
+	SALES_RECEIPT_DELETE_SUCCESS,
+
+	// 銷售類單據更新成功
+	SALES_RECEIPT_UPDATE_SUCCESS,
+
+	// 數據層操作失敗:ID重覆
+	DATA_OPERATE_FAIL_ID_REPEATED,
+
+	// 數據層操作失敗:ID不存在
+	DATA_OPERATE_FAIL_ID_NOT_FOUND,
+
+	// 數據層操作失敗:文件異常
+	DATA_OPERATE_FAIL_FILE_CRUSH,
+
+	// 數據層操作失敗:唯一標識不唯一
+	DATA_OPERATE_FAIL_NOT_UNIQUE,
+	
+	// 業務員添加成功
+	USER_INSERT_SUCCESS,
+
+	// 業務員刪除成功
+	USER_DELETE_SUCCESS,
+
+	// 業務員更新失败
+	USER_UPDATE_FAIL,
+
+	// 日誌添加成功
+	OPERATION_LOG_INSERT_FAIL,
+
+	// 日誌刪除成功
+	OPERATION_LOG_DELETE_SUCCESS,
+
+	// 庫存類單據添加成功
+	INVENTORY_RECEIPT_INSERT_SUCCESS,
+
+	// 庫存類單據刪除成功
+	INVENTORY_RECEIPT_DELETE_SUCCESS,
+
+	// 庫存類單據更新成功
+	INVENTORY_RECEIPT_UPDATE_SUCCESS,
+
+	// 客戶添加成功
+	MEMEBER_INSERT_SUCCESS,
+
+	// 客戶刪除成功
+	MEMBER_DELETE_SUCCESS,
+
+	// 客戶更新成功
+	MEMBER_UPDATE_SUCCESS,
+
+	// 庫存快照增加成功
+	RECORD_INSERT_SUCCESS,
+
+	// 在付款的时候出现余额为负的情况
+	FINANCIAL_RECEIPT_ACCOUNT_NEGATIVE,
+
+	// 红冲报警单错误
+	RED_COPY_ALARM_FAULT,
+
+	// 试图修改报警单错误
+	MODIFY_ALARM_FAULT,
+
+	// 试图将一个单据红冲两遍错误
+	RED_COPY_TWICE,
+
+	// 试图将一个单据红冲并复制两次
+	RED_COPY_MODIFY_TWICE,
+
+	// 建立库存报损单时，所填商品数量大于现有商品库存数量
+	INVENTORY_RECEIPT_BREAKAGE_NEGITIVE,
+
+	// 保存单据或者保存为草稿的时候没有填写时间，这个应该在界面层来进行检查
+	RECEIPT_NO_DATE_FAULT,
+
+	// 在单据通过审核的时候修改客户资料的时候出现问题,理论上应该不会出现
+	MEMBER_UPDATE_FAULT,
+
+	// 审核的时候单据状态更新出现问题，理论上不会出现
+	RECEIPT_UPDATE_FAULT,
+
+	//
+	PROMOTION_ADD_SUCCESS, PROMOTION_ADD_FALL, PROMOTION_DELETE_SUCCESS, PROMOTION_DELETE_FAIL,
+
+	DOCUMENT_DELETE_SUCCESS, DOCUMENT_DELETE_FAIL_NOT_FOUND, DOCUMENT_UPDATED_FAIL_NOT_FOUND, DOCUMENT_UPDATED_SUCCESS;
+}

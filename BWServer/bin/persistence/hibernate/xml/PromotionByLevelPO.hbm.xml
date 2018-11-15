@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-14 14:52:00 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="PO.PromotionByLevelPO" table="PROMOTIONBYLEVELPO">
+		<id name="promotionID" type="java.lang.String">
+			<column name="PROMOTIONID" />
+			<generator class="assigned" />
+		</id>
+
+		<property name="beginDate" type="java.util.Date">
+			<column name="BEGINDATE" />
+		</property>
+
+		<property name="endDate" type="java.util.Date">
+			<column name="ENDDATE" />
+		</property>
+
+		<property name="level">
+			<column name="LEVEL" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">enums.MemberVipLevel</param>
+			</type>
+		</property>
+
+		<property name="discount" type="double">
+			<column name="DISCOUNT" />
+		</property>
+
+		<property name="isDeleted" type="true_false">
+			<column name="ISDELETED" />
+		</property>
+
+		<set name="voucherPOs" table="PROMOTIONBYLEVEL_VOUCHER" cascade="save-update"
+			lazy="false" inverse="false">
+			<key column="PROMOTIONLEVELID"></key>
+			<many-to-many column="VOUCHERID" class="PO.VoucherPO"></many-to-many>
+		</set>
+
+		<set name="commodityPOs" table="PROMOTIONBYLEVE_LINEITEM" cascade="save-update"
+			lazy="false" inverse="false">
+			<key column="PROMOTIONLEVELID"></key>
+			<many-to-many column="LINEITEMID" class="PO.LineItemPO"></many-to-many>
+		</set>
+
+
+	</class>
+</hibernate-mapping>

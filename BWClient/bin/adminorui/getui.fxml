@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxWidth="1080.0" minWidth="1080.0" prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminorui.getui">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1080.0">
+         <image>
+            <Image url="@../background.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutY="133.0" mnemonicParsing="false" onAction="#HandleESC" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../09-876.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="991.0" layoutY="14.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleHelp" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../question.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="1030.0" layoutY="14.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleOut" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../home.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Text layoutX="459.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="管理员工" wrappingWidth="230.0">
+         <font>
+            <Font name="Verdana" size="30.0" />
+         </font>
+      </Text>
+      <Button layoutX="324.0" layoutY="712.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="72.0" text="确认">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="480.0" layoutY="711.0" mnemonicParsing="false" onAction="#HandleCancle" prefHeight="36.0" prefWidth="60.0" text="取消">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="629.0" layoutY="714.0" mnemonicParsing="false" onAction="#HandleDelete" prefHeight="30.0" prefWidth="60.0" text="删除" />
+   </children>
+</AnchorPane>

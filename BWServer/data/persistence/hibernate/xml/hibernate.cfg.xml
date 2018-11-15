@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/bwserver?characterEncoding=UTF-8</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">123123</property>
+		<property name="connection.pool_size">1</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="current_session_context_class">thread</property>
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<property name="show_sql">false</property>
+		<property name="hbm2ddl.auto">update</property>
+
+		<mapping resource="persistence/hibernate/xml/BankAccountPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/CommodityPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/UserPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/VoucherPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/MemberPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/CategoryPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/EmailPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/InventoryPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/LogPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/RecordPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/ReceiptPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/LineItemPO.hbm.xml" />
+		<mapping
+			resource="persistence/hibernate/xml/PromotionByCombinationListPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/PromotionBySumPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/InitializeAccountPO.hbm.xml" />
+		<mapping resource="persistence/hibernate/xml/PromotionByLevelPO.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

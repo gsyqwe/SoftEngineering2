@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventoryui.SearchCommodity">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="800.0">
+         <image>
+            <Image url="@../background.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="707.0" layoutY="5.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleHelp" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../help.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="742.0" layoutY="5.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleOut" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../esc1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutY="90.0" mnemonicParsing="false" onAction="#HandleEsc" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="37.0">
+               <image>
+                  <Image url="@../esc2.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="354.0" layoutY="135.0" prefHeight="46.0" prefWidth="113.0" text="商品查询">
+         <font>
+            <Font name="Verdana" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="170.0" text="搜索">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="272.0" layoutY="454.0" mnemonicParsing="false" text="查     询" />
+      <Button layoutX="467.0" layoutY="454.0" mnemonicParsing="false" text="取     消" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-14 3:26:59 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="PO.CategoryPO" table="CATEGORYPO">
+		<id name="id" type="java.lang.String">
+			<column name="ID" />
+			<generator class="assigned" />
+		</id>
+
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+
+		<property name="father" type="java.lang.String">
+			<column name="FATHER" />
+		</property>
+
+		<property name="type">
+			<column name="TYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">enums.CategoryType</param>
+			</type>
+		</property>
+
+		<property name="isDeleted" type="true_false">
+			<column name="ISDELETED" />
+		</property>
+
+		<list name="subCateOrCom" inverse="false" table="CATEGORY_SUBCATEORCOM"
+			lazy="false" cascade="all">
+			<key>
+				<column name="ID" />
+			</key>
+			<list-index></list-index>
+			<element type="java.lang.String">
+				<column name="SUBCATEORCOM" />
+			</element>
+		</list>
+	</class>
+</hibernate-mapping>

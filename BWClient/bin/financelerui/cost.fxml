@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="financelerui.cost">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="800.0">
+         <image>
+            <Image url="@../background.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="707.0" layoutY="5.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleHelp" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../question.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="742.0" layoutY="5.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#HandleOut" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutY="80.0" mnemonicParsing="false" onAction="#HandleEsc" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../09-876.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Text layoutX="42.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="297.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="制定现金费用单" textAlignment="CENTER" wrappingWidth="206.0">
+         <font>
+            <Font size="26.0" />
+         </font></Text>
+      <Button layoutX="642.0" layoutY="121.0" mnemonicParsing="false" onAction="#HandleExport" style="-fx-background-color: null;" />
+      <Text disable="true" layoutX="142.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="97.3603515625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="131.0" layoutY="416.0" mnemonicParsing="false" onAction="#HandleTI" prefHeight="32.0" prefWidth="108.0" text="添加并提交" />
+      <Button layoutX="342.0" layoutY="417.0" mnemonicParsing="false" onAction="#HandleCancle" prefHeight="30.0" prefWidth="117.0" text="取           消" />
+      <Label layoutX="29.0" layoutY="167.0" text="申请人编号">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="210.0" text="申请人职务">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="250.0" text="时          间">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="593.0" layoutY="417.0" mnemonicParsing="false" onAction="#HandleSaveDraft" prefHeight="30.0" prefWidth="117.0" text="保存草稿" />
+   </children>
+</AnchorPane>

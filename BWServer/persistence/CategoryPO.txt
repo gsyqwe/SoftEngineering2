@@ -1,0 +1,11 @@
+{"name":"大型燈","id":"CAT-00001","type":"NODE","subCateOrCom":["CAT-00010"]}
+{"name":"大型燈","id":"CAT-00002","type":"NODE","subCateOrCom":["CAT-00009","CAT-00008","CAT-00007"]}
+{"name":"大型燈","id":"CAT-00003","type":"NODE","subCateOrCom":["CAT-00006","CAT-00005"]}
+{"name":"大型燈","id":"CAT-00004","type":"NODE","subCateOrCom":["CAT-00004","CAT-00003","CAT-00002"]}
+{"name":"大型燈","id":"CAT-00005","type":"LEAF","subCateOrCom":["COM-20171207-00002","Tesing"]}
+{"name":"小型灯","id":"5","type":"NODE","subCateOrCom":["CAT-00001"]}
+{"name":"大型燈","id":"CAT-00001","type":"NODE","subCateOrCom":["CAT-00010"]}
+{"name":"大型燈","id":"CAT-00002","type":"NODE","subCateOrCom":["CAT-00009","CAT-00008","CAT-00007"]}
+{"name":"大型燈","id":"CAT-00003","type":"NODE","subCateOrCom":["CAT-00006","CAT-00005"]}
+{"name":"大型燈","id":"CAT-00004","type":"NODE","subCateOrCom":["CAT-00004","CAT-00003","CAT-00002"]}
+{"name":"大型燈","id":"CAT-00005","type":"LEAF","subCateOrCom":["COM-20171207-00002","Tesing"]}

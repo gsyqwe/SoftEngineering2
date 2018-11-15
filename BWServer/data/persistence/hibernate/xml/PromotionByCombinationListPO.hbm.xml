@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-13 0:48:54 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="PO.PromotionByCombinationListPO" table="PROMOTIONBYCOMBINATIONLISTPO">
+		<id name="promotionID" type="java.lang.String">
+			<column name="PROMOTIONID" />
+			<generator class="assigned" />
+		</id>
+
+		<set name="combination" table="PROMOTIONBYCOMBINATIONLIST_LINEITEM"
+			inverse="false" lazy="false" fetch="select" cascade="save-update">
+			<key column="COMBINATIONID" />
+			<many-to-many column="LINEITEMID" class="PO.LineItemPO" />
+		</set>
+
+		<property name="priceAfter" type="double">
+			<column name="PRICEAFTER" />
+		</property>
+
+		<property name="beginTime" type="java.util.Date">
+			<column name="BEGINTIME" />
+		</property>
+
+		<property name="endTime" type="java.util.Date">
+			<column name="ENDTIME" />
+		</property>
+
+		<property name="promotionName" type="java.lang.String">
+			<column name="PROMOTIONNAME" />
+		</property>
+
+		<property name="isDeleted" type="true_false">
+			<column name="ISDELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

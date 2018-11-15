@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-12 1:16:01 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="PO.InventoryPO" table="INVENTORYPO">
+		<id name="id" type="long">
+			<column name="ID" />
+			<generator class="increment" />
+		</id>
+		<property name="name" type="java.lang.String" access="field">
+			<column name="NAME"></column>
+		</property>
+		<property name="version" type="java.lang.String" access="field">
+			<column name="VERSION" />
+		</property>
+		<property name="quantity" type="int" access="field">
+			<column name="QUANTITY" />
+		</property>
+		<property name="averagePrice" type="double" access="field">
+			<column name="AVERAGEPRICE" />
+		</property>
+		<property name="isDeleted" type="true_false">
+			<column name="ISDELETED" />
+		</property>
+	</class>
+</hibernate-mapping>
